@@ -1,0 +1,284 @@
+ /*
+PALETTES
+https://colorpalettes.net/color-palette-2088/
+ */
+
+/*
+FONT IMPORT
+*/
+
+@font-face {
+    font-family: SchoolBell;
+    src: url(/resources/SchoolBell-Regular.ttf);
+}
+
+@font-face {
+    font-family: Merriweather;
+    src: url(/resources/Merriweather-Light.ttf);
+}
+
+@font-face {
+    font-family: Questrial;
+    src: url(/resources/Questrial-Regular.ttf);
+}
+
+@font-face {
+    font-family: PlayFair;
+    src: url(/resources/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url(/resources/Rubik.ttf);
+}
+
+@font-face {
+    font-family: Crimson;
+    src: url(/resources/Crimson.ttf);
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(/resources/Raleway.ttf);
+}
+ /*
+RESET STYLES
+ */
+ 
+ * {
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    list-style: none;
+    text-decoration: none;
+    /*font-family: 'Leto', Arial, Helvetica, sans-serif;*/
+}
+
+/*
+ANIMATIONS
+*/
+
+/*
+DEFAULT STYLES
+*/
+
+body {
+    background-color: #fff8ff;
+}
+
+a {
+    color: inherit;
+}
+
+/*
+CLASS STYLES
+*/
+
+/* MAIN HEADER */
+
+.main-header {
+    display: flex;
+    justify-content: center;
+    background-color: #0172ff;
+}
+
+/* -- NAVBAR */
+
+.navbar-logo {
+    padding: .65rem 0;
+    font-size: 1.5rem;
+    transition: background-color .1s linear;
+    font-family: Raleway, 'Leto', Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bolder;
+}
+
+.navbar {
+    color: white;
+    flex: 1;
+    display: flex;  
+    align-items: center;
+    font-family: Raleway;
+
+}
+
+.navbar-item {
+    display: block;
+}
+
+.navbar-directory {
+    font-weight: bold;
+    flex: 1;
+    text-align: right;
+}
+
+/* ARTICLE */
+
+/* -- ARTICLE HEADER */
+
+.article-title {
+    font-size: 2rem;
+}
+
+.author-date {
+    font-size: .8rem;
+    font-style: italic;
+}
+
+.article-header {
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+}
+
+.article-text {
+    font-family: Merriweather, Georgia, 'Times New Roman', Times, serif;
+    font-size: .9rem;
+    font-weight: 300;
+    line-height: 1.75rem;
+}
+
+
+/* -- AUTHOR BLURB */
+
+.author-blurb {
+    display: flex;
+    align-items: center;
+}
+
+.author-picture {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    align-self: flex-start;
+    background-image: url(https://thumbs.dreamstime.com/b/default-avatar-profile-icon-grey-photo-placeholder-women-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors-99724605.jpg);
+
+}
+
+.author-name {
+    margin-left: .5rem;
+    font-size: .8rem;
+
+}
+
+/*
+MAIN 
+*/
+
+.main-cont {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.dir-item {
+    padding: 0 1rem;
+    transition: font-size .5s;
+    font-size: .8rem;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dir-item a {
+    transition: font-size .5s, text-shadow .5s, color 1s;
+}
+
+.dir-item a:hover {
+    transition: font-size .5s, text-shadow .5s, color 1s;
+    /*color: #a5edf6;*/
+    text-shadow: 1px 5px #0000003a;
+    font-size: .9rem;
+    
+}
+
+.links{
+    
+    vertical-align: center;
+    display: none;
+    justify-content: center;
+    flex: 1;
+    font-family: Raleway;
+    background-color: white;
+    font-weight: 600;
+    font-size: .8rem;
+
+    /*border-bottom: 1px solid black;*/
+    transition: padding .5s;
+
+}
+
+.link {
+    padding: .6rem 2rem !important;
+    flex: 1;
+    
+}
+
+.link a:hover {
+    transition: color .5s;
+    color: #ee75bf;
+}
+
+/*.link:hover {
+    transition: background-color .5s, color .5s;
+    background-color: black;
+    color: white;
+}*/
+
+
+.content {
+    color: black;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    background-color: white;
+}
+
+.content > * {
+    flex: 1;
+    font-family: 'Leto', 
+}
+
+.side-a {
+    display: flex;
+}
+
+
+.author-blurb {
+    margin: 1rem 0 2rem 0;
+}
+
+.link-bar {
+    flex-grow: 2;
+}
+
+.down-icon {
+    width: 20px;
+    height: 20px;
+    background-image: url('/resources/images/arrow.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: transform .6s ease-in-out;
+    transform: rotate(180deg);
+}
+
+.down-icon:hover {
+    cursor: pointer;
+}
+
+.down-icon::after {
+    transition: transform .5s;
+    transform-origin: center;
+    transform: rotate(180deg);
+ 
+}
+
+/* LAYOUT CLASSES */
+
+.cont {
+    max-width: 540px;
+    padding: 0 2rem;
+}
